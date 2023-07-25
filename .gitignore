@@ -6,5 +6,8 @@
 
 scripts/chrXY_benchmark_exclusions/GRCh38_HG002_medical_genes_benchmark_generation.ipynb
 scripts/chrXY_benchmark_exclusions/GRCh38_AllTandemRepeatsandHomopolymers_slop5.bed.gz
-
+.DS_Store
+scripts/.DS_Store
+scripts/chrXY_benchmark_exclusions/.DS_Store
+scripts/chrXY_benchmark_exclusions/.ipynb_checkpoints/
 

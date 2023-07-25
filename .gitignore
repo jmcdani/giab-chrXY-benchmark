@@ -1,0 +1,10 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+
+scripts/chrXY_benchmark_exclusions/GRCh38_HG002_medical_genes_benchmark_generation.ipynb
+scripts/chrXY_benchmark_exclusions/GRCh38_AllTandemRepeatsandHomopolymers_slop5.bed.gz
+
+

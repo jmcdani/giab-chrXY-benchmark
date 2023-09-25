@@ -11,4 +11,5 @@ scripts/.DS_Store
 scripts/chrXY_benchmark_exclusions/.DS_Store
 scripts/chrXY_benchmark_exclusions/.ipynb_checkpoints/
 data/exclusions/intermediate/*
+data/exclusions/*
 data/draft_benchmarks/*

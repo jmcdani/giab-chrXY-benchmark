@@ -22,19 +22,19 @@ Institution: National Institute of Standards and Technology (NIST)
 Email: jennifer.mcdaniel@nist.gov
 
 ### Dates of Data Collection
-[MM-DD-YYYY to MM-DD-YYYY]
+[2022 to 2023-09-25]
 
 ### Background
 The chrXY small variant benchmark for SNV's and small indels less than 50bp in size
 was created using the T2T HG002 complete assembly of chromosomes X and Y. This benchmark 
 includes more challenging regions, like segmental duplications, that were excluded 
-from previous GIAB benchmarks. The benchmark includes 94.48892% of X and 63.28961% of Y 
+from previous GIAB benchmarks. The benchmark includes 94.5% of X and 63.3% of Y 
 in GRCh38, of 294 medically relevant genes on these chromosomes, 270 are >90% included 
 and 251 are >99% included in the XY small variant benchmark regions, as well as some 
-challenging regions like 68.23813% of segmental duplications, 0.1549578 of satellite DNA, 
-99% of XTR. A higher fraction - 4.8723613% - of indels are large indels 15 to 49 bp in 
-size compared to the v4.2.1 benchmark - 2.6117621%. Also, a higher fraction - 30.3060056% - 
-of indels are in tandem repeats compared to the v4.2.1 benchmark - 20.895619%.
+challenging regions like 68.2% of segmental duplications, 0.2% of satellite DNA, 
+99% of XTR. A higher fraction (4.9%) of indels are large indels 15 to 49 bp in 
+size compared to the v4.2.1 benchmark (2.6%). Also, a higher fraction (30.3%) 
+of indels are in tandem repeats compared to the v4.2.1 benchmark (20.9%).
 
 ### Data Usage
 
@@ -64,13 +64,13 @@ See NIST license and data use policy at the end of the document.
 DATA & FILE OVERVIEW
 --------------------------------------------------------------------------------
 
-HG002_GRCh38_chrXY_smallvar_v1.0.bed : bed file with small variant benchmark regions.
-HG002_GRCh38_chrXY_smallvar_v1.0.vcf.gz : bgzipped vcf file with benchmark small variants.
+*.bed : bed file with small variant benchmark regions.  
+*vcf.gz : bgzipped vcf file with benchmark small variants.
 
 ### File List with md5s:
-96e20f3a7c74ff71c2d96c1fe9c91d5f	HG002_GRCh38_chrXY_smallvar_v1.0.bed  
-881bcfc624506871f0537575cf1badbc	HG002_GRCh38_chrXY_smallvar_v1.0.vcf.gz  
-efacd65872b081095b5ae2bb8b53b78a	HG002_GRCh38_chrXY_smallvar_v1.0.vcf.gz.tbi  
+96e20f3a7c74ff71c2d96c1fe9c91d5f	`HG002_GRCh38_chrXY_smallvar_v1.0.bed`    
+881bcfc624506871f0537575cf1badbc	`HG002_GRCh38_chrXY_smallvar_v1.0.vcf.gz`  
+efacd65872b081095b5ae2bb8b53b78a	`HG002_GRCh38_chrXY_smallvar_v1.0.vcf.gz.tbi`  
 
 
 METHODOLOGICAL INFORMATION
@@ -79,8 +79,8 @@ METHODOLOGICAL INFORMATION
 To create a small variant benchmark for SNVs and small indels less than 50 bp in size, 
 we align the T2T assembly of HG002’s X and Y to GRCh38 and call variants with 
 [dipcall](https://github.com/lh3/dipcall) that was developed during the course of 
-the syndip effort.8 We then exclude regions where assembly-based small variant calling 
-is unreliable and/or benchmarking tools are unreliable
+the syndip effort. We then exclude regions where assembly-based small variant calling 
+is unreliable and/or benchmarking tools are unreliable.
 
 NIST Data Use Policy
 --------------------------------------------------------------------------------

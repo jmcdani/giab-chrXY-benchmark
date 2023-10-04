@@ -1,4 +1,6 @@
 The chrXY Benchmark README was generated 2023-09-26 by Jennifer McDaniel, NIST.
+README updated 2023-10-04 by J.McDaniel, NIST. 
+
 
 GENERAL INFORMATION
 --------------------------------------------------------------------------------
@@ -58,9 +60,9 @@ See NIST license and data use policy at the end of the document.
 	Nurk, S. et al. The complete sequence of a human genome. Science 376, 44–53 (2022).
 
 ### Links to publicly accessible locations of the data:
-- [HG002 chrXY small variant benchmark files](https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/release/AshkenazimTrio/HG002_NA24385_son/chrXY/GRCh38/SmallVariant)
-- github - pending
-- data.nist.gov - pending 
+- [GIAB FTP link to HG002 chrXY small variant benchmark files](https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/release/AshkenazimTrio/HG002_NA24385_son/chrXY/GRCh38/SmallVariant)
+- [GIAB GitHub]() contains code and manuscript figure generation - pending
+- [data.nist.gov]() contains files and links to all resources used to generate and disseminate benchmark - pending 
 
 
 DATA & FILE OVERVIEW
@@ -73,7 +75,8 @@ DATA & FILE OVERVIEW
 * `*.dip.vcf.gz.tbi`: index file for `*.dip.vcf.gz`
 * `*.hap1.bam`: dipcall generated BAM file with paternal haplotype aligned to the reference.
 * `*.hap2.bam`: dipcall generated BAM file with maternal haplotype aligned to the reference.
-* `*.bai`: index file for `*.hap1.bam` or `*.hap2.bam`.
+* `*.bai`: index file for `*.hap1.bam` or `*.hap2.bam`.  
+* `.fa.gz`: bgzipped FASTA file for assembly
 
 ### File List with md5s:
 **SmallVariant/**  
@@ -89,12 +92,16 @@ d157c2ac9ccd6c78a1795e45f8b23a82	GRCh38_T2T-XY-v2.7_dipcall-z2k.hap1.bam.bai
 3bfa03087f53eeb342d8107f88aef7eb	GRCh38_T2T-XY-v2.7_dipcall-z2k.hap2.bam  
 0014483d2e5b97812f82535c8373f127	GRCh38_T2T-XY-v2.7_dipcall-z2k.hap2.bam.bai
 
+**SmallVariant/SupplementaryFiles/T2T-XY-v2.7_assembly/**
+039aa77922b385c278ae062957875f98	chrX_v2.7.fa.gz
+9892d72069b2c31f030854ee259afe55	chrY_v2.7.fa.gz
+
 
 METHODOLOGICAL INFORMATION
 --------------------------------------------------------------------------------
 
 __Generating Small Variant Benchmark:__   
-To create a small variant benchmark for SNVs and small indels less than 50 bp in size, we align the [T2T assembly (v2.7)]() of HG002’s X and Y to [GRCh38](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz) and call variants with [dipcall](https://github.com/lh3/dipcall) that was developed during the course of the syndip effort. Files in `SmallVariant/SupplementaryFiles/T2T-XY-v2.7-align2-GRCh38/` are the alignment files produced by dipcall. 
+To create a small variant benchmark for SNVs and small indels less than 50 bp in size, we align the T2T-XY-v2.7 assembly of HG002’s X and Y to [GRCh38](https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz) and call variants with [dipcall](https://github.com/lh3/dipcall) that was developed during the course of the syndip effort. Files in `SmallVariant/SupplementaryFiles/T2T-XY-v2.7-align2-GRCh38/` are the alignment files produced by dipcall. 
 
 We then exclude regions where assembly-based small variant calling is unreliable and/or benchmarking tools are unreliable. Exclusions include:
 1. loci with more than one contig aligning (except in the X PAR)
